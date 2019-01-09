@@ -1,66 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>メモ</title>
-
-<link rel="apple-touch-icon" href="favicons/apple-touch-icon-180x180.png" sizes="180×180">
-<link rel="icon" href="favicons/icon-16x16.png" type="image/png" sizes="16×16">
-<link rel="manifest" href="favicons/manifest.json">
-
-<script src="jquery-3.3.1.min.js"></script>
-
-<style>
-	body{
-		background-color:rgba(234,110,251,1.00);
-	}
-	
-	@media screen and (max-width:480px){
-		body{
-		background-color:rgba(240,244,83,1.00);
-	}
-		textarea{
-			width: 90%;
-		}
-		input{
-			width: 100%;
-			font-size: 20px;
-			border: 1px solid #000;
-			margin-top: 20px;
-			background-color: rgba(158,22,237,1.00);
-			
-		}
-	}
-		
-	</style>
+    <meta charset="UTF-8">
+    <title>ナゾトキTOP</title>
+    <style>
+        body{
+            max-width: 100%;
+            height: auto;
+            background-color: #F0EBEB;
+            font-family: "游ゴシック";
+            font-weight: bold;
+        }
+        #container { 
+            position: relative; 
+            width: 100%; 
+            height: auto !important; height: 100%; 
+            min-height: 100%; 
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            background-color: #F89174;
+            margin-bottom: 10px;
+            position:fixed; 
+            top: 0;
+        }
+        #img{
+            width: auto;
+            text-align: center;
+        }
+        #main{
+            width: 100%;
+            height: auto;
+            padding-bottom: 100px;
+            padding-top: 100px;
+        }
+        #moji{
+            color: #5B5B5B;
+            margin-bottom: 50px;
+        }
+        #moji h1{
+            font-size: 40px;
+            text-align: center;
+            margin-top: 90px;
+        }
+        #moji p{
+            font-size: 40px;
+            text-align: center;
+        }
+        #stage{
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+        #stage img{
+            width: 400px;
+            margin: 10px;
+            box-shadow: 6px 6px 15px #DAD2D2;
+        }
+        footer{
+            width: 100%;
+            height: 70px;
+            background-color: #F89174;
+            margin-top: 10px;
+            position:fixed; 
+            bottom: 0;
+        }
+        footer p{
+            width: auto;
+            height: auto;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #F0EBEB;
+            margin: 0;
+            padding: 10px 0px 0px 0px;
+        }
+    </style>
 </head>
-
 <body>
+<header>
+<div id="img">
+<img src="logo.png">
+</div>
+</header>
+<div id="main">
 
-<form action="" id="form">
-	<textarea id="memo" cols="30" rows="10"></textarea>
-	<div>
-		<input id="save" type="button" value="保存">
-		<input id="dele" type="button" value="消去">
-	</div>
-</form>
-<script>
-	var memo = localStorage.getItem("memodata");
-	$("#memo").val(memo);
-	
-	$("#save").click(function(){
-	memo = $("#memo").val();
-	localStorage.setItem("memodata","モメはメモじゃない");
-	});
-	
-	$("#dele").click(function(){
-	$("#memo").val('');
-	localStorage.clear();
-	});
-	</script>
+<div id="moji">
+<h1>― ステージセレクト ―</h1>
 
+</div>
+
+<div id="stage">
+    <a href="que1.html"><img src="button1.png"></a>
+    <a href="que2.html"><img src="button2.png"></a>
+    <a href="que3.html"><img src="button3.png"></a>
+    <a href="que4.html"><img src="button4.png"></a>
+    <a href="que5.html"><img src="button5.png"></a>
+    <a href="que6.html"><img src="button6.png"></a>
+</div>
+
+</div>
+
+<footer>
+    <p>&copy; NAZOTOKI</p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>結果</title>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    
+    <style>
+        body{
+            max-width: 100%;
+            height: auto;
+            background-color: #F0EBEB;
+            font-family: "游ゴシック";
+            font-weight: bold;
+        }
+        #container4 { 
+            position: relative; 
+            width: 100%; 
+            height: auto !important; height: 100%; 
+            min-height: 100%; 
+        }
+        #container2 { 
+            position: relative; 
+            width: 100%; 
+            height: auto !important; height: 100%; 
+            min-height: 100%; 
+        }
+        #container5 { 
+            position: relative; 
+            width: 100%; 
+            height: auto !important; height: 100%; 
+            min-height: 100%; 
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            background-color: #F89174;
+            margin-bottom: 10px;
+            position:fixed; 
+            top: 0;
+        }
+        #img{
+            width: auto;
+            text-align: center;
+        }
+        #main{
+            width: 100%;
+            height: auto;
+            padding-bottom: 100px;
+            padding-top: 100px;
+        }
+        #moji{
+            color: #5B5B5B;
+        }
+        #moji h1{
+            font-size: 33px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #moji p{
+            font-size: 40px;
+            text-align: center;
+        }
+        #mondai{
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+        #mondai img{
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 6px 6px 15px #DAD2D2;
+        }
+        #botan{
+            width: 600px;
+            height: 120px;
+            background-color: #AAD6EC;
+            border-radius: 2px;
+            color: #F0EBEB;
+            font-size: 60px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 6px 6px 15px #DAD2D2;
+            display: block;
+            letter-spacing: 5px;
+            text-align: center;
+            line-height: 130px;
+            margin: 40px 0px;
+        }
+        #bottun{
+            width: 600px;
+            height: auto;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: auto;
+            
+        }
+        footer{
+            width: 100%;
+            height: 70px;
+            background-color: #F89174;
+            margin-top: 10px;
+            position:fixed; 
+            bottom: 0;
+        }
+        footer p{
+            width: auto;
+            height: auto;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #F0EBEB;
+            margin: 0;
+            padding: 10px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="base">
+
+<!--不正解-->
+
+<div id="container4" class="start">
+<header>
+<div id="img">
+<img src="logo.png">
+</div>
+</header>
+    
+<div id="main">
+<div id="moji">
+<h1></h1>
+<p>- 不正解-</p>
+</div>
+<div id="mondai">
+    <img src="kari.png">
+</div>
+<div id="bottun">
+<a id="botan" href="que1.html">問題に戻る</a>
+<a id="botan" href="#container2" class="nav">ヒント</a>
+<a id="botan" href="index.html">トップ</a>
+</div>
+</div>
+
+<footer>
+<p>&copy; NAZOTOKI</p>
+</footer>
+</div>
+
+<!--ヒント-->
+
+<div id="container2" class="start">
+<header>
+<div id="img">
+<img src="logo.png">
+</div>
+</header>
+    
+<div id="main">
+<div id="moji">
+<h1></h1>
+<p>- ヒ ン ト -</p>
+</div>
+<div id="mondai">
+    <img src="kari.png">
+</div>
+<div id="bottun">
+<a id="botan" href="que1.html">問題に戻る</a>
+<a id="botan" href="#container5" class="nav">解説</a>
+<a id="botan" href="index.html">トップ</a>
+</div>
+</div>
+
+<footer>
+<p>&copy; NAZOTOKI</p>
+</footer>
+</div>
+    
+<!--解説-->
+
+<div id="container5" class="start">
+<header>
+<div id="img">
+<img src="logo.png">
+</div>
+</header>
+    
+<div id="main">
+<div id="moji">
+<h1></h1>
+<p>- 解 説 -</p>
+</div>
+<div id="mondai">
+    <img src="kari.png">
+</div>
+<div id="bottun">
+<a id="botan" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"><script charset="utf-8"></script>シェア</a>
+<a id="botan" href="index.html">トップ</a>
+</div>
+</div>
+
+<footer>
+<p>&copy; NAZOTOKI</p>
+</footer>
+</div>
+
+<script>
+$(function(){
+    $(".start").hide();
+    $("#container4").show();
+    
+    $("#container4 a.nav").click(function(){
+        $("#container4").hide();
+        $("#container2").show();
+    });
+    
+    $("#container2 a.nav").click(function(){
+        $("#container2").hide();
+        $("#container5").show();
+    });
+
+    $("#container5 a.nav").click(function(){
+        $("#container5").hide();
+        $("#container2").show();
+    });
+    
+    
+});
+</script>
+
+</div>
+
+</body>
+</html>
